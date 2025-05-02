@@ -33,3 +33,8 @@ REVOKE ALL ON SCHEMA public FROM dbuser;
 ```
 
 - login with new user: `psql -U dbuser -d sample`
+- delete user:
+  - revoke all privileges from dbuser: `REVOKE ALL PRIVILEGES ON DATABASE sample FROM dbuser;`
+  - drop the user: `DROP USER dbuser;`
+
+
