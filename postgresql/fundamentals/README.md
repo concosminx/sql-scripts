@@ -99,5 +99,13 @@ DELIMITER ','
 CSV HEADER;
 ```
 
+# Backup
+- binary: `pg_dump -U postgres -h localhost -p 5432 -F c -b -v -f /data/backup_file.dump sample`
+- sql: `pg_dump -U postgres -h localhost -p 5432 -F p -d sample -f /data/sample_backup.sql`
+
+# Restore
+- binary: `pg_restore -U postgres -h localhost -p 5432 -d sample -v /data/backup_file.dump`
+- sql: `pg_restore -U postgres -h localhost -p 5432 -d sample -v /data/sample_backup.sql`
+
 
 Original author: [https://github.com/veryacademy/CW0001-SQL-Fundamentals-with-PostgreSQL-FreeView](https://github.com/veryacademy/CW0001-SQL-Fundamentals-with-PostgreSQL-FreeView)
